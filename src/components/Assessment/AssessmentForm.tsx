@@ -258,6 +258,8 @@ export default function AssessmentForm() {
 
   const [errors, setErrors] = useState<any>({});
   const [consent, setConsent] = useState(false);
+  const [selectedBarriers, setSelectedBarriers] = useState<string[]>([]);
+  
 
   const [answers, setAnswers] = useState<{
     [key: number]: {
@@ -406,15 +408,15 @@ export default function AssessmentForm() {
   };
 
 
-  const toggleBarrier = (id: string) =>
-    setSelectedBarriers((prev) =>
-      prev.includes(id) ? prev.filter((b) => b !== id) : [...prev, id]
-    );
+  // const toggleBarrier = (id: string) =>
+  //   setSelectedBarriers((prev) =>
+  //     prev.includes(id) ? prev.filter((b) => b !== id) : [...prev, id]
+  //   );
 
-  const toggleFocus = (id: string) =>
-    setFocusAreas((prev) =>
-      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
-    );
+  // const toggleFocus = (id: string) =>
+  //   setFocusAreas((prev) =>
+  //     prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
+  //   );
 
   if (submitted) {
     return (
