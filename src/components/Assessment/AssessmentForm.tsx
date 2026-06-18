@@ -258,8 +258,12 @@ export default function AssessmentForm() {
 
   const [errors, setErrors] = useState<any>({});
   const [consent, setConsent] = useState(false);
+
   const [answers, setAnswers] = useState<{
-    [key: number]: string;
+    [key: number]: {
+      value: string;
+      label: string;
+    };
   }>({});
 
 
@@ -353,7 +357,7 @@ export default function AssessmentForm() {
     // Questions validation
     for (let i = 1; i <= QUESTIONS.length; i++) {
 
-      if (!answers[i]) {
+      if (!answers?.[i]) {
         newErrors[`question_${i}`] = true;
       }
 
