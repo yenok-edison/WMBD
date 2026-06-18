@@ -763,11 +763,17 @@ export const QUESTIONS = [
 export default function AssessmentForm() {
   const [submitted, setSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
-  const [answers, setAnswers] = useState({});
+  // const [answers, setAnswers] = useState({});
 
   const [errors, setErrors] = useState<any>({});
   const [consent, setConsent] = useState(false);
 
+  const [answers, setAnswers] = useState<{
+    [key: number]: {
+      value: string;
+      label: string;
+    };
+  }>({});
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -844,7 +850,7 @@ export default function AssessmentForm() {
     // Questions validation
     for (let i = 1; i <= QUESTIONS.length; i++) {
 
-      if (!answers[i]) {
+      if (!answers?.[i]) {
         newErrors[`question_${i}`] = true;
       }
 
@@ -893,15 +899,15 @@ export default function AssessmentForm() {
   };
 
 
-  const toggleBarrier = (id: string) =>
-    setSelectedBarriers((prev) =>
-      prev.includes(id) ? prev.filter((b) => b !== id) : [...prev, id]
-    );
+  // const toggleBarrier = (id: string) =>
+  //   setSelectedBarriers((prev) =>
+  //     prev.includes(id) ? prev.filter((b) => b !== id) : [...prev, id]
+  //   );
 
-  const toggleFocus = (id: string) =>
-    setFocusAreas((prev) =>
-      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
-    );
+  // const toggleFocus = (id: string) =>
+  //   setFocusAreas((prev) =>
+  //     prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
+  //   );
 
   if (submitted) {
     return (
