@@ -254,10 +254,13 @@ export const QUESTIONS = [
 export default function AssessmentForm() {
   const [submitted, setSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
-  const [answers, setAnswers] = useState({});
+  // const [answers, setAnswers] = useState({});
 
   const [errors, setErrors] = useState<any>({});
   const [consent, setConsent] = useState(false);
+  const [answers, setAnswers] = useState<{
+    [key: number]: string;
+  }>({});
 
 
   const [formData, setFormData] = useState({
