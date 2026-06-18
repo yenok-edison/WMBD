@@ -9,47 +9,79 @@ const config: Config = {
   ],
   
   theme: {
-    extend: {
-      keyframes: {
-        rise: {
-          from: { transform: "scaleY(0)", transformOrigin: "bottom" },
-          to:   { transform: "scaleY(1)", transformOrigin: "bottom" },
+  extend: {
+    keyframes: {
+      rise: {
+        from: {
+          transform: "scaleY(0)",
+          transformOrigin: "bottom",
         },
-        dash: {
-          from: { strokeDashoffset: "200" },
-          to:   { strokeDashoffset: "0" },
+        to: {
+          transform: "scaleY(1)",
+          transformOrigin: "bottom",
         },
-        floatY: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%":     { transform: "translateY(-8px)" },
-        },
-        popIn: {
-          from: { opacity: "0", transform: "scale(0.6)" },
-          to:   { opacity: "1", transform: "scale(1)" },
-        },
-        fadeIn: {
-              "0%": { opacity: "0", transform: "translateY(8px)" },
-              "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        animation: {
-            fadeIn: "fadeIn 0.4s ease-out both",
-        },
-        marquee: {
-          "0%":   { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },  // -50% because list is duplicated
-        },
-        animation: {
-          marquee: "marquee 30s linear infinite",
-        }
       },
-      animation: {
-        "rise":      "rise 1.2s cubic-bezier(0.34,1.2,0.64,1) both",
-        "dash":      "dash 1.5s ease-out 1.5s both",
-        "float":     "floatY 5s ease-in-out infinite",
-        "float-2":   "floatY 5s ease-in-out 1.5s infinite",
-        "float-3":   "floatY 5s ease-in-out 3s infinite",
-        "pop-in":    "popIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 1.8s both",
+
+      dash: {
+        from: { strokeDashoffset: "200" },
+        to: { strokeDashoffset: "0" },
       },
+
+      floatY: {
+        "0%,100%": { transform: "translateY(0)" },
+        "50%": { transform: "translateY(-8px)" },
+      },
+
+      popIn: {
+        from: {
+          opacity: "0",
+          transform: "scale(0.6)",
+        },
+        to: {
+          opacity: "1",
+          transform: "scale(1)",
+        },
+      },
+
+      fadeIn: {
+        "0%": {
+          opacity: "0",
+          transform: "translateY(8px)",
+        },
+        "100%": {
+          opacity: "1",
+          transform: "translateY(0)",
+        },
+      },
+
+      marquee: {
+        "0%": {
+          transform: "translateX(0%)",
+        },
+        "100%": {
+          transform: "translateX(-50%)",
+        },
+      },
+    },
+
+    animation: {
+      marquee: "marquee 30s linear infinite",
+      fadeIn: "fadeIn 0.4s ease-out both",
+      rise: "rise 0.8s ease-out forwards",
+      dash: "dash 1.5s ease forwards",
+      floatY: "floatY 3s ease-in-out infinite",
+      popIn: "popIn 0.5s ease-out forwards",
+    },
+  // },
+// },
+      // animation: {
+      //   "rise":      "rise 1.2s cubic-bezier(0.34,1.2,0.64,1) both",
+      //   "dash":      "dash 1.5s ease-out 1.5s both",
+      //   "float":     "floatY 5s ease-in-out infinite",
+      //   "float-2":   "floatY 5s ease-in-out 1.5s infinite",
+      //   "float-3":   "floatY 5s ease-in-out 3s infinite",
+      //   "pop-in":    "popIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 1.8s both",
+      // },
       maxWidth: {
         '219': '13.6875rem',
         '266': '16.625rem',
