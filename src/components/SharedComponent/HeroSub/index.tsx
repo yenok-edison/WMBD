@@ -21,9 +21,9 @@ const HeroSub: FC<HeroSubProps> = ({ title, description, breadcrumbLinks }) => {
                                 {description}
                             </p>
                         </div>
-                        {/* <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
                         <Breadcrumb links={breadcrumbLinks} />
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>
