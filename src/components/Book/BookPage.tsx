@@ -11,7 +11,8 @@ import {
 } from "lucide-react";
 // import StrategyCallModal from '@/components/Home/StrategyCallModal';
 import StrategyCallModal from '@/components/Book/StrategyCallPage';
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React, { FC, useState } from "react";
 
 
 const features = [
@@ -43,6 +44,53 @@ const features = [
 
 export default function BookPage() {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setMessage("Please enter your email address.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyPdvNv-PT1oyX5Y-0Sd1_hZMdCDzTY1T0tEHdWDccJWfEh4OAZIgjT6zajdmDhwQ1D/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify({
+            sheetName: "Free Chapter",
+            type: "book_subscription",
+            email,
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.result === "success") {
+        setMessage(
+          "Thank you! The free chapters will be sent to your email shortly."
+        );
+        setEmail("");
+      } else {
+        setMessage("Thank you! The free chapters will be sent to your email shortly.");
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage("Failed to subscribe.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className=" dark:bg-darkmode overflow-x-hidden">
 
@@ -285,7 +333,7 @@ export default function BookPage() {
               <div className="relative rounded-[40px] overflow-hidden border dark:border-dark_border shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
 
                 <Image
-                  src="/images/hero/arjun.png"
+                  src="/images/hero/arjun1.jpeg"
                   alt="Author"
                   width={700}
                   height={900}
@@ -366,10 +414,6 @@ export default function BookPage() {
 
             <h2
               className="text-5xl md:text-6xl font-bold leading-[1.1] text-IcyBreeze"
-              // style={{
-              //   fontFamily:
-              //     "'Playfair Display', Georgia, serif",
-              // }}
             >
               Get Free Chapters
               <br />
@@ -383,18 +427,38 @@ export default function BookPage() {
             {/* Form */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
 
+              {/* <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 h-16 px-6 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md text-IcyBreeze placeholder:text-CadetBlue focus:outline-none focus:border-primary"
+              /> */}
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 className="flex-1 h-16 px-6 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md text-IcyBreeze placeholder:text-CadetBlue focus:outline-none focus:border-primary"
               />
 
-              <button className="h-16 px-10 rounded-2xl bg-primary text-secondary font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+              {/* <button className="h-16 px-10 rounded-2xl bg-primary text-secondary font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                 Subscribe
+                <Download className="w-4 h-4" />
+              </button> */}
+              <button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="h-16 px-10 rounded-2xl bg-primary text-secondary font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                {loading ? "Submitting..." : "Subscribe"}
                 <Download className="w-4 h-4" />
               </button>
 
             </div>
+            {message && (
+              <p className="mt-4 text-sm text-primary text-center">
+                {message}
+              </p>
+            )}
 
           </div>
 

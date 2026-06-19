@@ -169,7 +169,7 @@ const Hero = () => {
 
                   {/* Image */}
                   <Image
-                    src="/images/hero/arjun.png"
+                    src="/images/hero/arjun1.jpeg"
                     alt="Arjun Raj Urs"
                     fill
                     priority

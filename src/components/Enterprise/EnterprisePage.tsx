@@ -81,16 +81,20 @@ const solutions = [
       "Success stories in case study format-downloadable PDFs",
     highlights: [
       {
-        title: "Download WMBD Brochure",
-        file: "/downloads/wmbd-brochure.pdf",
+        title: "Prioritizing Profit Over Revenue Growth",
+        file: "/document/case/CS1_Prioritizing_Profit_Over_Revenue_Growth.pdf",
       },
       {
-        title: "Download Case Study",
-        file: "/downloads/wmbd-case-study.pdf",
+        title: "Turning an MNC Profitable After 8 Years of Losses",
+        file: "/document/case/CS3_Turning_an_MNC_Profitable_After_8_Years.pdf",
       },
       {
-        title: "Download Framework Guide",
-        file: "/downloads/wmbd-guide.pdf",
+        title: "Transforming Leadership for Scalable Growth",
+        file: "/document/case/CS4_Transforming_Leadership_for_Scalable_Growth.pdf",
+      },
+      {
+        title: "From Stagnation to Acceleration",
+        file: "/document/case/CS5_From_Stagnation_to_Acceleration.pdf",
       },
     ],
   },
@@ -173,7 +177,7 @@ export default function EnterprisePage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
 
                 <span className="text-[11px] font-medium text-white dark:text-teal-300 tracking-wide uppercase">
-                  Enterprise Solutions
+                  WMBD Enterprise
                 </span>
               </div>
 
@@ -192,8 +196,8 @@ export default function EnterprisePage() {
 
               {/* DESC */}
               <p className="mt-10 text-lg md:text-xl leading-[2] text-SlateBlueText dark:text-CadetBlue max-w-5xl mx-auto">
-                As organisations grow, new challenges begin to emerge.<br></br>
-                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce organizational effectiveness.<br></br>
+                As organisations grow, new challenges begin to emerge.
+                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce organizational effectiveness.
                 Through our structured Data Driven Coaching & Course Correction (D2C3) Model, we help organizations improve leadership effectiveness, strengthen accountability culture, enhance organizational productivity and create sustainable business growth.
 
               </p>
@@ -450,9 +454,9 @@ export default function EnterprisePage() {
               <div className="relative flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12">
                 {/* LEFT */}
                 <div className="max-w-3xl">
-                  <p className="uppercase tracking-[0.3em] text-sm text-cyan-300 font-semibold mb-5">
+                  {/* <p className="uppercase tracking-[0.3em] text-sm text-cyan-300 font-semibold mb-5">
                     Growth Stories
-                  </p>
+                  </p> */}
 
                   <h2
                     className="text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.08] text-white"

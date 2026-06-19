@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Arjun Raj Urs",
     role: "Founder & Business Growth Coach",
-    image: "/images/hero/arjun.png",
+    image: "/images/hero/arjun1.jpeg",
     description:
       "Arjun Raj Urs is a Business Results Coach and People Architect with over three decades of experience working with organizations across growth, leadership development, and business transformation. As the creator of the Win More By Design™ methodology, Arjun combines practical business experience with leadership coaching to help organizations strengthen productivity, align teams and achieve measurable business results.",
 
@@ -48,24 +48,7 @@ const teamMembers = [
       "Hari Talupuru is a Marketing and Communication professional, responsible for the marketing function at WMBD Management Services LLP. He will be the frontending for us and will be the first connect for all our clients. Hari’s introduction to Win More By Design was through the coaching program conducted by Arjun Raj Urs in 2019. The power of practical methodology provided in the program led him to join WMBD Management Services LLP in 2024, to spread awareness of the program across corporates, enterprises, leaders and entrepreneurs. He has over 30 years of experience in the fields of Sales, Business Development, International Marketing, Communication, Team Development, Animations and App Development.",
 
     cards: [
-      {
-        title: "Executive Communication",
-        points: [
-          "Leadership communication coaching",
-          "Presentation confidence building",
-          "Stakeholder communication systems",
-          "Executive presence development",
-        ],
-      },
-      {
-        title: "People Performance",
-        points: [
-          "Organisational collaboration",
-          "Leadership capability building",
-          "People alignment strategies",
-          "Performance improvement systems",
-        ],
-      },
+      
     ],
   },
 ];

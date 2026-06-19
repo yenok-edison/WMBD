@@ -145,10 +145,10 @@ export default async function Post({ params }: any) {
                                                     className="wow fadeInUp relative mb-5 text-2xl dark:text-white text-black  sm:text-[28px] leading-[1.2]"
                                                     data-wow-delay=".1s"
                                                 >
-                                                    Share
+                                                    Connect
                                                 </h2>
                                                 <div className="flex gap-4 flex-col">
-                                                    <div className="bg-[#526fa3] py-4 px-6 text-xl rounded-lg text-white">
+                                                    {/* <div className="bg-[#526fa3] py-4 px-6 text-xl rounded-lg text-white">
                                                         <Link href="#" className="flex items-center ">
                                                             <svg
                                                                 className="svg-inline--fa fa-facebook-f me-3"
@@ -169,7 +169,7 @@ export default async function Post({ params }: any) {
                                                             </svg>
                                                             Facebook
                                                         </Link>
-                                                    </div>
+                                                    </div> */}
                                                     {/* <div className="bg-[#46C4FF] py-4 px-6 text-xl rounded-lg text-white">
                                                         <Link href="#" className="flex items-center ">
                                                             <svg

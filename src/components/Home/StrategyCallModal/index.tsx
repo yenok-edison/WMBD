@@ -189,7 +189,7 @@ const StrategyCallModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
             id="modal-title"
             className="text-xl font-semibold text-gray-900 dark:text-white"
           >
-            Book a Strategy Call
+            Book a Call
           </h2>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             Tell us a little about yourself and we'll be in touch to confirm your slot.
@@ -211,7 +211,7 @@ const StrategyCallModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                   Successfully Sent! 
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-xs">
-                  We'll reach out to <span className="text-gray-700 dark:text-gray-200 font-medium">{form.email}</span> within 24 hours to confirm your strategy call.
+                  We'll reach out to <span className="text-gray-700 dark:text-gray-200 font-medium">{form.email}</span> within 24 hours to confirm your call.
                 </p>
               </div>
               {/* <button
@@ -329,7 +329,7 @@ const StrategyCallModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                     Submitting…
                   </>
                 ) : (
-                  "Book my Strategy Call →"
+                  "Book a Call →"
                 )}
               </button>
 

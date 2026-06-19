@@ -4,7 +4,7 @@ import {BreadcrumbLink} from "@/types/breadcrumb"
 
 interface HeroSubProps {
     title: string;
-    description: string;
+    description: React.ReactNode;
     breadcrumbLinks: BreadcrumbLink[];
 }
 

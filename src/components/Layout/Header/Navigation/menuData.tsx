@@ -12,7 +12,7 @@ export const headerData: HeaderItem[] = [
     submenu: [
       { label: "OPA Assessment", href: "/forms" },
       { label: "Leaders Productivity Assessment", href: "/leadership" },
-      { label: "Blog", href: "/blog" },
+      { label: "Blog (Arjun's lens)", href: "/blog" },
       { label: "The Unwavering Leader", href: "/book" },
     ],
   },

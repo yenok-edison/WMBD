@@ -7,20 +7,38 @@ import Slider from "react-slick";
 const testimonialsData = [
   {
     id: 1,
-    name: "Jordhan Daniyel",
-    profile: "/images/testimonials/testimonials-profile.png",
-    image: "/images/hero/john.png",
+    name: "Mr.Manjukiran Pacchhipulusu",
+    profile: "/images/testimonials/profile1.jpeg",
+    image: "/images/testimonials/image.png",
     review:
-      "My busy schedule leaves little, if any, time for blogging and social media. The Lorem Ipsum Company has been a huge part of helping me grow my business through. My busy schedule leaves little, if any, time for blogging and social media.",
+      "We were going through an uncertain phase during 2020. We are glad we were able to overcome the same and grow to 200+ Schools today.  Your coaching helped us in handling the setback and taking our company to new heights",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Robert",
-    profile: "/images/testimonials/testimonials-profile.png",
-    image: "/images/hero/john.png",
+    name: "Mr.Vikas Goel",
+    profile: "/images/testimonials/profile1.jpeg",
+    image: "/images/testimonials/image.png",
     review:
-      "The support and guidance I received were outstanding. Their team helped us improve our online visibility and engagement. Highly recommended for anyone looking to grow their brand.",
+      "Arjun, you have set us on a journey from the traditional role of scorekeepers, data recorders and controllers to become value integrators. We are now moving towards business performance optimisation, predictive insights, enterprise risk management and enabling prudent decision-making. This shift has created opportunities for our people to lead, learn and grow beyond routine responsibilities.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Mr.Sachin Das",
+    profile: "/images/testimonials/profile1.jpeg",
+    image: "/images/testimonials/image.png",
+    review:
+      "At Musee Musical, we had been looking for a coach who could help us with our transformation from a family-owned entity to a more professionally led organisation. One of the biggest concerns we had was the value which we have inherited and how this should not get diluted in this transformation, but here comes Arjun, who completely understands this value and has worked on how this could be translated as a culture, keeping the same as a pivotal piece in the transformation journey. Thank you, Arjun, for understanding the passion and using the same to fuel the change.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Mr.Debashish",
+    profile: "/images/testimonials/profile1.jpeg",
+    image: "/images/testimonials/image.png",
+    review:
+      "Your interventions helped our people gain a wider perspective. They now see their roles as a means for success and as a way to contribute to a larger cause. Our leaders and employees feel more self-assured.",
     rating: 5,
   },
 ];

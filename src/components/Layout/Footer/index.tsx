@@ -1,8 +1,58 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
+// import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer: FC = () => {
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+
+    const handleNewsletterSubmit = async (
+        e: React.FormEvent<HTMLFormElement>
+        ) => {
+        e.preventDefault();
+
+        if (!email) {
+            setMessage("Please enter your email address.");
+            return;
+        }
+
+        try {
+            setLoading(true);
+
+            const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbyPdvNv-PT1oyX5Y-0Sd1_hZMdCDzTY1T0tEHdWDccJWfEh4OAZIgjT6zajdmDhwQ1D/exec",
+            {
+                method: "POST",
+                headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+                },
+                body: JSON.stringify({
+                    sheetName: "Newsletter",
+                    type: "newsletter",
+                    email,
+                }),
+            }
+            );
+
+            const result = await response.json();
+
+            if (result.result === "success") {
+            setMessage("Thank you for subscribing!");
+            setEmail("");
+            } else {
+            setMessage("Something went wrong.");
+            }
+        } catch (error) {
+            console.error(error);
+            setMessage("Failed to subscribe.");
+        } finally {
+            setLoading(false);
+        }
+        };
     return (
         <footer className="bg-secondary">
             <div className="container">
@@ -34,7 +84,7 @@ const Footer: FC = () => {
                         <ul className="flex items-center gap-5 mb-4 mt-5">
 
                             {/* YouTube */}
-                            <li>
+                            {/* <li>
                                 <Link
                                     href="/"
                                     className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group hover:bg-ElectricAqua transition-all duration-300"
@@ -50,7 +100,7 @@ const Footer: FC = () => {
                                         <path d="M23.5 6.2C23.2 5 22.3 4.1 21.1 3.8C19 3.2 12 3.2 12 3.2C12 3.2 5 3.2 2.9 3.8C1.7 4.1 0.8 5 0.5 6.2C0 8.3 0 12 0 12C0 12 0 15.7 0.5 17.8C0.8 19 1.7 19.9 2.9 20.2C5 20.8 12 20.8 12 20.8C12 20.8 19 20.8 21.1 20.2C22.3 19.9 23.2 19 23.5 17.8C24 15.7 24 12 24 12C24 12 24 8.3 23.5 6.2ZM9.6 15.7V8.3L15.8 12L9.6 15.7Z" />
                                     </svg>
                                 </Link>
-                            </li>
+                            </li> */}
 
                             {/* LinkedIn */}
                             <li>
@@ -70,9 +120,31 @@ const Footer: FC = () => {
                                     </svg>
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    href="/contact"
+                                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group hover:bg-ElectricAqua transition-all duration-300"
+                                >
+                                    <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="stroke-white group-hover:stroke-secondary"
+                                    >
+                                    <path
+                                        d="M22 16.92V20.5C22 21.33 21.33 22 20.5 22C10.28 22 2 13.72 2 3.5C2 2.67 2.67 2 3.5 2H7.08C7.8 2 8.42 2.5 8.57 3.2L9.33 6.72C9.46 7.35 9.23 8 8.74 8.39L6.59 10.11C7.98 12.93 11.07 16.02 13.89 17.41L15.61 15.26C16 14.77 16.65 14.54 17.28 14.67L20.8 15.43C21.5 15.58 22 16.2 22 16.92Z"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                    </svg>
+                                </Link>
+                                </li>
 
                             {/* Instagram */}
-                            <li>
+                            {/* <li>
                                 <Link
                                     href="/"
                                     className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group hover:bg-ElectricAqua transition-all duration-300"
@@ -88,7 +160,7 @@ const Footer: FC = () => {
                                         <path d="M7 2C4.2 2 2 4.2 2 7V17C2 19.8 4.2 22 7 22H17C19.8 22 22 19.8 22 17V7C22 4.2 19.8 2 17 2H7ZM18 5.5C18.8 5.5 19.5 6.2 19.5 7C19.5 7.8 18.8 8.5 18 8.5C17.2 8.5 16.5 7.8 16.5 7C16.5 6.2 17.2 5.5 18 5.5ZM12 7C14.8 7 17 9.2 17 12C17 14.8 14.8 17 12 17C9.2 17 7 14.8 7 12C7 9.2 9.2 7 12 7ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9Z" />
                                     </svg>
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
 
                         
@@ -120,19 +192,45 @@ const Footer: FC = () => {
                             Subscribe Newsletter
                         </p>
                         <div className="w-full col-span-8">
-                            <form className="newsletter-form bg-white dark:bg-transparent flex rounded-md justify-end overflow-hidden rounded-tl-lg rounded-bl-lg">
-                                <input
+                            {/* <form className="newsletter-form bg-white dark:bg-transparent flex rounded-md justify-end overflow-hidden rounded-tl-lg rounded-bl-lg"> */}
+                            <form
+                                onSubmit={handleNewsletterSubmit}
+                                className="newsletter-form bg-white flex rounded-md justify-end overflow-hidden rounded-tl-lg rounded-bl-lg"
+                                >
+                                {/* <input
                                     type="email"
                                     placeholder="Email address*"
                                     className="p-4 text-base border-0 rounded-md outline-0 w-[calc(100%_-_137px)] flex dark:bg-midnight_text dark:text-white dark:rounded-none dark:w-full dark:bg-darkmode"
+                                /> */}
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Email address*"
+                                    required
+                                    className="p-4 text-base border-0 rounded-md outline-0 w-[calc(100%_-_137px)]"
                                 />
-                                <button
+                                {/* <button
                                     type="submit"
                                     className="btn btn-1 hover-filled-slide-down bg-RegalBlue"
                                 >
                                     <span className="!border-0 !text-white">Subscribe</span>
+                                </button> */}
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="btn btn-1 hover-filled-slide-down bg-RegalBlue"
+                                    >
+                                    <span className="!border-0 !text-white">
+                                        {loading ? "Submitting..." : "Subscribe"}
+                                    </span>
                                 </button>
                             </form>
+                            {message && (
+                                <p className="mt-3 text-sm text-green-500">
+                                    {message}
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>

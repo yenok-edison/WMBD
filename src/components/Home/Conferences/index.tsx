@@ -8,19 +8,19 @@ import ThumbnailCarousel from "../ThumbnailCarousel";
 
 // Define per-slide content here
 const slideContent = [
+   {
+    heading: "The Unwavering Leader",
+    description:
+      "Drawing from years of leadership advisory experience, Arjun Raj Urs shares insights, proven frameworks and a practical blueprint for leadership to help leaders drive growth, strengthen execution and build high-performing organizations.",
+    linkLabel: "Explore the Book",
+    href: "/book",
+  },
   {
     heading: "Growth & Organisational Performance",
     description:
       "Identify the hidden barriers that slow growth and execution. Build the structure, alignment and accountability needed to improve organizational performance.",
     linkLabel: "Explore Growth Programs",
     href: "/",
-  },
-  {
-    heading: "The Unwavering Leader",
-    description:
-      "Drawing from years of leadership advisory experience, Arjun Raj Urs shares insights, proven frameworks and a practical blueprint for leadership to help leaders drive growth, strengthen execution and build high-performing organizations.",
-    linkLabel: "Explore the Book",
-    href: "/book",
   },
   {
     heading: "Arjun's Lens",

@@ -164,7 +164,7 @@ const ContactForm = () => {
             </span>
 
             <h2 className="text-secondary dark:text-white lg:text-[52px] text-[36px] leading-tight font-bold mt-4">
-              Get Online Consultation
+              Connect with us
             </h2>
 
             <p className="text-SlateBlueText dark:text-gray-300 text-lg leading-8 mt-6 max-w-[580px]">
@@ -209,7 +209,7 @@ const ContactForm = () => {
               </div>
 
               {/* Phone */}
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-ElectricAqua/10 flex items-center justify-center shrink-0">
                   <svg
                     width="22"
@@ -236,7 +236,7 @@ const ContactForm = () => {
                     +91 99999 99999
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Form */}

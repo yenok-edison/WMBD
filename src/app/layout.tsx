@@ -22,11 +22,11 @@ export default function RootLayout({
       <body className={dmsans.className}>
       <AuthDialogProvider>
       <SessionProviderComp session={session}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           enableSystem={true}
-          defaultTheme="system"
-        >
+          defaultTheme="light"
+        > */}
           <Aoscompo>
             <Header />
             <NextTopLoader />
@@ -34,7 +34,7 @@ export default function RootLayout({
             <Footer />
           </Aoscompo>
           <ScrollToTop />
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
         </SessionProviderComp>
         </AuthDialogProvider>
       </body>
