@@ -74,14 +74,13 @@ export default function BookPage() {
       );
 
       const result = await response.json();
-
-      if (result.result === "success") {
+      if (result.success) {
         setMessage(
           "Thank you! The free chapters will be sent to your email shortly."
         );
         setEmail("");
       } else {
-        setMessage("Thank you! The free chapters will be sent to your email shortly.");
+        setMessage("Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error(error);

@@ -40,11 +40,13 @@ const Footer: FC = () => {
 
             const result = await response.json();
 
-            if (result.result === "success") {
-            setMessage("Thank you for subscribing!");
-            setEmail("");
+            if (result.success) {
+                setMessage(
+                "Thank you for subscribing!."
+                );
+                setEmail("");
             } else {
-            setMessage("Something went wrong.");
+                setMessage("Something went wrong. Please try again.");
             }
         } catch (error) {
             console.error(error);

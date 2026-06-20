@@ -446,10 +446,7 @@ export default function EnterprisePage() {
                 bg-secondary
                 px-8 md:px-16 py-20
                 "
-                // bg-gradient-to-br from-secondary via-[#102238] to-primary
             >
-              {/* GLOW */}
-              {/* <div className="absolute right-0 top-0 w-[450px] h-[450px] bg-white/10 rounded-full blur-3xl" /> */}
 
               <div className="relative flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12">
                 {/* LEFT */}
