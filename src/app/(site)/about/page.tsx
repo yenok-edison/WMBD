@@ -8,7 +8,7 @@ import TicketSection from "@/components/Home/TicketSection";
 import About from "@/components/About/AboutPage";
 import AboutPage from "@/components/About/AboutPage";
 export const metadata: Metadata = {
-    title: "Contact | Symposium",
+    title: "About | WMBD",
 };
 
 const page = () => {

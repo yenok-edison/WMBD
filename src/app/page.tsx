@@ -10,7 +10,7 @@ import Testimonials from '@/components/Home/Testimonials';
 import TicketSection from '@/components/Home/TicketSection';
 import Brand from '@/components/Home/Brand';
 export const metadata: Metadata = {
-  title: "Symposium",
+  title: "Winmorebydesign",
 };
 
 export default function Home() {

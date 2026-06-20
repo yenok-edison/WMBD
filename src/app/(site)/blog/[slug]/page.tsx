@@ -193,7 +193,7 @@ export default async function Post({ params }: any) {
                                                         </Link>
                                                     </div> */}
                                                     <div className="bg-[#3C86AD] py-4 px-6 text-xl rounded-lg text-white">
-                                                        <Link href="#" className="flex items-center ">
+                                                        <Link href="https://www.linkedin.com/in/arjunrajurs/" className="flex items-center ">
                                                             <svg
                                                                 className="svg-inline--fa fa-linkedin-in me-3"
                                                                 aria-hidden="true"

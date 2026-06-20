@@ -177,6 +177,44 @@ const Header: React.FC = () => {
               <span className="block w-6 h-0.5 bg-black dark:bg-white mt-1.5"></span>
               <span className="block w-6 h-0.5 bg-black dark:bg-white mt-1.5"></span>
             </button> */}
+            <button
+              onClick={() => setNavbarOpen(!navbarOpen)}
+              className="block lg:hidden p-2 rounded-lg"
+              aria-label="Toggle mobile menu"
+            >
+              {navbarOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M18 6L6 18M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </div>
@@ -184,7 +222,7 @@ const Header: React.FC = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40" />
       )}
 
-      {/* <div
+      <div
         ref={mobileMenuRef}
         className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-darkmode shadow-lg transform transition-transform duration-300 max-w-64 ${
           navbarOpen ? "translate-x-0" : "translate-x-full"
@@ -220,7 +258,7 @@ const Header: React.FC = () => {
           {headerData.map((item, index) => (
             <MobileHeaderLink key={index} item={item} />
           ))}
-          <div className="mt-4 flex flex-col space-y-4 w-full">
+          {/* <div className="mt-4 flex flex-col space-y-4 w-full">
             <Link
               href="#"
               className="bg-transparent border border-solid border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white"
@@ -241,9 +279,9 @@ const Header: React.FC = () => {
             >
               Sign Up
             </Link>
-          </div>
+          </div> */}
         </nav>
-      </div> */}
+      </div>
             {/* Successsful Login Alert */}
             {/* <div className={`fixed top-6 end-1/2 translate-x-1/2 z-50 ${authDialog?.isSuccessDialogOpen == true ? "block" : "hidden"}`}>
        <SuccessfullLogin/>

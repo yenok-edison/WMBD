@@ -107,7 +107,7 @@ const Footer: FC = () => {
                             {/* LinkedIn */}
                             <li>
                                 <Link
-                                    href="/"
+                                    href="https://in.linkedin.com/company/winmore-bydesign"
                                     className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group hover:bg-ElectricAqua transition-all duration-300"
                                 >
                                     <svg
