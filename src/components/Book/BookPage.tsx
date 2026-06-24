@@ -48,6 +48,7 @@ export default function BookPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [playVideo, setPlayVideo] = useState(false);
 
   const handleSubscribe = async () => {
     if (!email) {
@@ -257,11 +258,10 @@ export default function BookPage() {
       </section>
 
       {/* ───────────────── FEATURES SECTION ───────────────── */}
-      <section className="py-28 dark:bg-darkmode">
+      {/* <section className="py-28 dark:bg-darkmode">
 
         <div className="container mx-auto px-6">
 
-          {/* Heading */}
           <div className="text-center max-w-4xl mx-auto mb-20">
 
             <p className="text-primary uppercase tracking-[0.22em] text-sm font-semibold mb-4">
@@ -270,10 +270,6 @@ export default function BookPage() {
 
             <h2
               className="text-5xl md:text-6xl font-bold leading-[1.1] text-MidnightNavyText dark:text-IcyBreeze"
-              // style={{
-              //   fontFamily:
-              //     "'Playfair Display', Georgia, serif",
-              // }}
             >
               Powerful Lessons
               <br />
@@ -287,7 +283,7 @@ export default function BookPage() {
 
           </div>
 
-          {/* Features */}
+
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
 
             {features.map((feature) => (
@@ -315,6 +311,103 @@ export default function BookPage() {
 
         </div>
 
+      </section> */}
+      <section className="py-28 dark:bg-darkmode">
+        <div className="container mx-auto px-6">
+
+          <div className="text-center max-w-4xl mx-auto mb-20">
+
+            <p className="text-primary uppercase tracking-[0.22em] text-sm font-semibold mb-4">
+              What You Will Learn
+            </p>
+
+            <h2
+              className="text-5xl md:text-6xl font-bold leading-[1.1] text-MidnightNavyText dark:text-IcyBreeze"
+            >
+              Powerful Lessons
+              <br />
+              From The Book
+            </h2>
+
+            <p className="mt-8 text-lg leading-[2] text-SlateBlueText dark:text-CadetBlue">
+              Practical frameworks, leadership systems, and actionable
+              business growth strategies designed for modern organisations.
+            </p>
+
+          </div>
+
+          <div className="grid lg:grid-cols-[380px_1fr] gap-12 items-start">
+  
+            {/* Left Side Video */}
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-[360px]">
+
+                {!playVideo ? (
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() => setPlayVideo(true)}
+                  >
+                    {/* Cover Image */}
+                    <img
+                      src="/images/book/book_launch.png"
+                      alt="Book Video"
+                      className="w-full rounded-[32px] shadow-xl object-cover"
+                    />
+
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-black/30 rounded-[32px]" />
+
+                    {/* Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                          className="w-8 h-8 text-primary ml-1"
+                        >
+                          <path d="M11.596 8.697L6.233 11.89A.802.802 0 015 11.193V4.807a.802.802 0 011.233-.697l5.363 3.193a.802.802 0 010 1.394z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <video
+                    controls
+                    autoPlay
+                    className="w-full rounded-[32px] shadow-xl"
+                  >
+                    <source src="/videos/book1.mp4" type="video/mp4" />
+                  </video>
+                )}
+              </div>
+            </div>
+
+            {/* Right Side Features */}
+            <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="group bg-IcyBreeze dark:bg-darklight border border-PowderBlueBorder dark:border-dark_border rounded-[32px] p-8 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(15,23,42,0.08)]"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Check className="w-6 h-6 text-primary" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-MidnightNavyText dark:text-IcyBreeze mb-5">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-SlateBlueText dark:text-CadetBlue leading-[2]">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
       {/* ───────────────── AUTHOR SECTION ───────────────── */}
