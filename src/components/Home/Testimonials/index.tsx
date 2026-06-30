@@ -9,6 +9,7 @@ const testimonialsData = [
     id: 1,
     name: "Mr.Manjukiran Pacchhipulusu",
     profile: "/images/testimonials/profile1.jpeg",
+    role: "Founder, Next Element Pvt Ltd",
     image: "/images/testimonials/image.png",
     review:
       "We were going through an uncertain phase during 2020. We are glad we were able to overcome the same and grow to 200+ Schools today.  Your coaching helped us in handling the setback and taking our company to new heights",
@@ -18,6 +19,7 @@ const testimonialsData = [
     id: 2,
     name: "Mr.Vikas Goel",
     profile: "/images/testimonials/profile1.jpeg",
+    role: "CFO, Weir Minerals",
     image: "/images/testimonials/image.png",
     review:
       "Arjun, you have set us on a journey from the traditional role of scorekeepers, data recorders and controllers to become value integrators. We are now moving towards business performance optimisation, predictive insights, enterprise risk management and enabling prudent decision-making. This shift has created opportunities for our people to lead, learn and grow beyond routine responsibilities.",
@@ -27,6 +29,7 @@ const testimonialsData = [
     id: 3,
     name: "Mr.Sachin Das",
     profile: "/images/testimonials/profile1.jpeg",
+    role: "Director of Musee Musical",
     image: "/images/testimonials/image.png",
     review:
       "At Musee Musical, we had been looking for a coach who could help us with our transformation from a family-owned entity to a more professionally led organisation. One of the biggest concerns we had was the value which we have inherited and how this should not get diluted in this transformation, but here comes Arjun, who completely understands this value and has worked on how this could be translated as a culture, keeping the same as a pivotal piece in the transformation journey. Thank you, Arjun, for understanding the passion and using the same to fuel the change.",
@@ -36,6 +39,7 @@ const testimonialsData = [
     id: 4,
     name: "Mr.Debashish",
     profile: "/images/testimonials/profile1.jpeg",
+    role: "Director - HR India, Allergan",
     image: "/images/testimonials/image.png",
     review:
       "Your interventions helped our people gain a wider perspective. They now see their roles as a means for success and as a way to contribute to a larger cause. Our leaders and employees feel more self-assured.",
@@ -44,23 +48,6 @@ const testimonialsData = [
 ];
 
 
-// const StarRating = ({ rating }) => {
-//   return (
-//     <div className="flex items-center gap-1">
-//       {[...Array(rating)].map((_, index) => (
-//         <svg
-//           key={index}
-//           className="w-4 h-4 text-yellow-500"
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="currentColor"
-//           viewBox="0 0 22 20"
-//         >
-//           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-//         </svg>
-//       ))}
-//     </div>
-//   );
-// };
 interface StarRatingProps {
   rating: number;
 }
@@ -75,67 +62,91 @@ const StarRating = ({ rating }: StarRatingProps) => {
   );
 };
 
+
+
 const Testimonials = () => {
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         dots: true,
+  //       },
+  //     },
+  //   ],
+  // };
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          dots: true,
-        },
-      },
-    ],
+      dots: true,
+      arrows: false,
+      infinite: true,
+      speed: 600,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
   };
 
   return (
-    <section className="bg-IcyBreeze dark:bg-darklight testimonial py-20">
+    // <section className="bg-IcyBreeze dark:bg-darklight testimonial py-20">
+    <section className="bg-IcyBreeze dark:bg-darklight testimonial py-12 lg:py-20">
       <div className="container">
         <Slider {...settings}>
           {testimonialsData.map((item) => (
             <div key={item.id}>
-              <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-10">
+              {/* <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-10"> */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-10">
                 
                 {/* Left Image */}
                 <div className="col-span-3 bg-LightSkyBlue lg:block hidden overflow-hidden rounded-3xl">
+                {/* <div className="col-span-3 overflow-hidden rounded-3xl mx-auto w-full max-w-xs lg:max-w-none"> */}
                   <Image
                     src={item.image}
                     alt={item.name}
                     width={500}
                     height={600}
-                    quality={100}
-                    className="w-full h-full object-cover"
+                    className="w-full h-[320px] lg:h-full object-cover rounded-3xl"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="col-span-8 md:ml-20">
+                <div className="col-span-9 lg:ml-20">
+                {/* <div className="col-span-8 md:ml-20"> */}
                   
-                  <div className="flex items-center gap-5">
+                  {/* <div className="flex items-center gap-5"> */}
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
                     <Image
                       src={item.profile}
                       alt={item.name}
-                      width={64}
-                      height={64}
-                      quality={100}
-                      className="rounded-full object-cover"
+                      width={80}
+                      height={80}
+                      // quality={100}
+                      className="rounded-full object-cover w-20 h-20"
                     />
 
                     <div>
-                      <h4 className="text-xl font-medium text-secondary dark:text-darktext">
+                      <h4 className="text-xl lg:text-2xl font-semibold text-secondary dark:text-darktext">
                         {item.name}
                       </h4>
 
-                      <StarRating rating={item.rating} />
+                      {/* <StarRating rating={item.rating} /> */}
+                      <div className="mt-2 flex justify-center sm:justify-start">
+                          <StarRating rating={item.rating} />
+                      </div>
+                      <p className="text-sm lg:text-base italic text-SlateBlueText font-medium dark:text-darktext">
+                        {item.role}
+                      </p>
                     </div>
                   </div>
 
-                  <p className="text-[22px] leading-[2rem] font-normal text-SlateBlueText dark:text-opacity-80 py-10 max-w-632">
-                    {item.review}
+                  <p className="text-base sm:text-lg lg:text-[22px] leading-7 lg:leading-[2rem] text-SlateBlueText dark:text-opacity-80 py-6 lg:py-10 max-w-3xl text-center sm:text-left">
+                    <span className="text-4xl text-primary leading-none">“</span>
+                      {item.review}
+                    <span className="text-4xl text-primary leading-none">”</span>
                   </p>
 
                 </div>

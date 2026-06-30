@@ -133,7 +133,7 @@ body {
 .brand-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .brand-marquee:hover {

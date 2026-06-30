@@ -82,7 +82,7 @@ export default async function BlogHead({ params }: Props) {
                                 <span className="text-base text-SlateBlueText pr-7 border-r border-solid border-white w-fit">
                                     {format(new Date(post.date), "dd MMM yyyy")}
                                 </span>
-                                <span className="text-base text-SlateBlueText sm:pl-7 pl-0 w-fit">13 Comments</span>
+                                {/* <span className="text-base text-SlateBlueText sm:pl-7 pl-0 w-fit">13 Comments</span> */}
                             </div>
                             <h2 className="text-SlateBlueText pt-7 text-[40px] leading-[3.4rem] font-bold">
                                 {post.title}
@@ -99,7 +99,7 @@ export default async function BlogHead({ params }: Props) {
                                 style={{ width: 'auto', height: 'auto' }}
                             />
                             <div>
-                                <span className="text-[22px] leading-[2rem] text-SlateBlueText">Silicaman</span>
+                                <span className="text-[22px] leading-[2rem] text-SlateBlueText">Arjun Urs</span>
                                 <p className="text-xl text-SlateBlueText">Author</p>
                             </div>
                         </div>

@@ -323,9 +323,9 @@ export default function AssessmentForm() {
     }
 
     // OPA Report No
-    if (!formData.opaReportNo.trim()) {
-      newErrors.opaReportNo = "OPA Report No is required";
-    }
+    // if (!formData.opaReportNo.trim()) {
+    //   newErrors.opaReportNo = "OPA Report No is required";
+    // }
 
     // Industry
     if (!formData.industry) {
@@ -338,14 +338,14 @@ export default function AssessmentForm() {
     }
 
     // Audit Status
-    if (!formData.opaAuditStatus) {
-      newErrors.opaAuditStatus = "Select audit status";
-    }
+    // if (!formData.opaAuditStatus) {
+    //   newErrors.opaAuditStatus = "Select audit status";
+    // }
 
     // Report Date
-    if (!formData.reportDate) {
-      newErrors.reportDate = "Select report date";
-    }
+    // if (!formData.reportDate) {
+    //   newErrors.reportDate = "Select report date";
+    // }
 
     setErrors(newErrors);
 
@@ -556,7 +556,7 @@ export default function AssessmentForm() {
                   { label: "Company name *", type: "text", placeholder: "Your organisation name", field: "companyName" },
                   { label: "Work email *", type: "email", placeholder: "you@company.com", field: "email" },
                   { label: "Phone number *", type: "tel", placeholder: "+91 98765 43210", field: "phone" },
-                  { label: "OPA Report No *", type: "text", placeholder: "25-02", field: "opaReportNo" },
+                  // { label: "OPA Report No *", type: "text", placeholder: "25-02", field: "opaReportNo" },
                 ].map((f) => (
 
                   <div
@@ -602,12 +602,12 @@ export default function AssessmentForm() {
                     placeholder: "Select team size",
                     field: "companySize",
                   },
-                  {
-                    label: "OPA Audit Status *",
-                    options: REGIONS,
-                    placeholder: "Select status",
-                    field: "opaAuditStatus",
-                  },
+                  // {
+                  //   label: "OPA Audit Status *",
+                  //   options: REGIONS,
+                  //   placeholder: "Select status",
+                  //   field: "opaAuditStatus",
+                  // },
                 ].map((f) => (
 
                   <div key={f.label}>
@@ -641,7 +641,7 @@ export default function AssessmentForm() {
                   </div>
                 ))}
 
-                <div>
+                {/* <div>
 
                   <label className="block text-xs font-semibold text-SlateBlueText dark:text-CadetBlue uppercase tracking-wider mb-2">
                     Report Date *
@@ -664,7 +664,7 @@ export default function AssessmentForm() {
 
                   {getFieldError("reportDate")}
 
-                </div>
+                </div> */}
               </div>
             </div>
 

@@ -12,7 +12,7 @@ const Footer: FC = () => {
 
     const handleNewsletterSubmit = async (
         e: React.FormEvent<HTMLFormElement>
-        ) => {
+    ) => {
         e.preventDefault();
 
         if (!email) {
@@ -24,25 +24,25 @@ const Footer: FC = () => {
             setLoading(true);
 
             const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbyPdvNv-PT1oyX5Y-0Sd1_hZMdCDzTY1T0tEHdWDccJWfEh4OAZIgjT6zajdmDhwQ1D/exec",
-            {
-                method: "POST",
-                headers: {
-                "Content-Type": "text/plain;charset=utf-8",
-                },
-                body: JSON.stringify({
-                    sheetName: "Newsletter",
-                    type: "newsletter",
-                    email,
-                }),
-            }
+                "https://script.google.com/macros/s/AKfycbyPdvNv-PT1oyX5Y-0Sd1_hZMdCDzTY1T0tEHdWDccJWfEh4OAZIgjT6zajdmDhwQ1D/exec",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8",
+                    },
+                    body: JSON.stringify({
+                        sheetName: "Newsletter",
+                        type: "newsletter",
+                        email,
+                    }),
+                }
             );
 
             const result = await response.json();
 
             if (result.success) {
                 setMessage(
-                "Thank you for subscribing!."
+                    "Thank you for subscribing!."
                 );
                 setEmail("");
             } else {
@@ -54,7 +54,7 @@ const Footer: FC = () => {
         } finally {
             setLoading(false);
         }
-        };
+    };
     return (
         <footer className="bg-secondary">
             <div className="container">
@@ -72,7 +72,7 @@ const Footer: FC = () => {
                                 className="object-contain"
                             />
                         </Link>
-                         <p className="text-PaleCerulean text-sm leading-7 max-w-[320px] mt-5">
+                        <p className="text-PaleCerulean text-sm leading-7 max-w-[320px] mt-5">
                             An organisation-specific business coaching program designed to remove
                             barriers & accelerate growth.
                         </p>
@@ -128,22 +128,22 @@ const Footer: FC = () => {
                                     className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group hover:bg-ElectricAqua transition-all duration-300"
                                 >
                                     <svg
-                                    width="22"
-                                    height="22"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="stroke-white group-hover:stroke-secondary"
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="stroke-white group-hover:stroke-secondary"
                                     >
-                                    <path
-                                        d="M22 16.92V20.5C22 21.33 21.33 22 20.5 22C10.28 22 2 13.72 2 3.5C2 2.67 2.67 2 3.5 2H7.08C7.8 2 8.42 2.5 8.57 3.2L9.33 6.72C9.46 7.35 9.23 8 8.74 8.39L6.59 10.11C7.98 12.93 11.07 16.02 13.89 17.41L15.61 15.26C16 14.77 16.65 14.54 17.28 14.67L20.8 15.43C21.5 15.58 22 16.2 22 16.92Z"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
+                                        <path
+                                            d="M22 16.92V20.5C22 21.33 21.33 22 20.5 22C10.28 22 2 13.72 2 3.5C2 2.67 2.67 2 3.5 2H7.08C7.8 2 8.42 2.5 8.57 3.2L9.33 6.72C9.46 7.35 9.23 8 8.74 8.39L6.59 10.11C7.98 12.93 11.07 16.02 13.89 17.41L15.61 15.26C16 14.77 16.65 14.54 17.28 14.67L20.8 15.43C21.5 15.58 22 16.2 22 16.92Z"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
                                     </svg>
                                 </Link>
-                                </li>
+                            </li>
 
                             {/* Instagram */}
                             {/* <li>
@@ -165,7 +165,7 @@ const Footer: FC = () => {
                             </li> */}
                         </ul>
 
-                        
+
                     </div>
 
                     {/* Right - Contact */}
@@ -187,7 +187,7 @@ const Footer: FC = () => {
                         <p className="text-base font-normal text-PaleCerulean">
                             © All rights reserved.
                         </p>
-                        
+
                     </div>
                     <div className="col-span-7 grid md:grid-cols-12 grid-cols-1 items-center gap-6">
                         <p className="text-xl text-PaleCerulean font-normal col-span-4">
@@ -198,7 +198,7 @@ const Footer: FC = () => {
                             <form
                                 onSubmit={handleNewsletterSubmit}
                                 className="newsletter-form bg-white flex rounded-md justify-end overflow-hidden rounded-tl-lg rounded-bl-lg"
-                                >
+                            >
                                 {/* <input
                                     type="email"
                                     placeholder="Email address*"
@@ -222,7 +222,7 @@ const Footer: FC = () => {
                                     type="submit"
                                     disabled={loading}
                                     className="btn btn-1 hover-filled-slide-down bg-RegalBlue"
-                                    >
+                                >
                                     <span className="!border-0 !text-white">
                                         {loading ? "Submitting..." : "Subscribe"}
                                     </span>

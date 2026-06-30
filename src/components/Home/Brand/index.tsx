@@ -3,18 +3,11 @@ import React from "react";
 import Image from "next/image";
 
 // ─── Brand data ───────────────────────────────────────────────────
-// Replace src paths with your actual logo files.
-// Use grayscale logos (PNG/SVG with transparent background) for best results.
 const brands = [
   { name: "Enspar",      src: "/images/brand/logo1.png" },
   { name: "U-Solar",   src: "/images/brand/logo2.png" },
   { name: "Intellisol",      src: "/images/brand/logo3.png" },
   { name: "Musee",     src: "/images/brand/logo4.png" },
-  // { name: "Wipro",       src: "/images/brand/wipro.svg" },
-  // { name: "Deloitte",    src: "/images/brand/deloitte.svg" },
-  // { name: "IBM",         src: "/images/brand/ibm.svg" },
-  // { name: "Accenture",   src: "/images/brand/accenture.svg" },
-  // { name: "Accenture",   src: "/images/brand/images.png" },
 ];
 
 // Duplicate list so the marquee loops seamlessly

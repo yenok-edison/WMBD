@@ -36,25 +36,37 @@ const ConferencesSection: React.FC = () => {
   const current = slideContent[activeIndex];
 
   return (
-    <section className="bg-IcyBreeze dark:bg-darklight relative overflow-hidden before:absolute before:content-[''] before:bg-PaleSkyBlu before:dark:bg-secondary before:w-687 before:h-687 before:-bottom-1/2 before:rounded-full before:xl:inline-block before:hidden">
+    // <section className="bg-IcyBreeze dark:bg-darklight relative overflow-hidden before:absolute before:content-[''] before:bg-PaleSkyBlu before:dark:bg-secondary before:w-687 before:h-687 before:-bottom-1/2 before:rounded-full before:xl:inline-block before:hidden">
+    <section className="bg-IcyBreeze dark:bg-darklight relative overflow-hidden py-12 lg:py-20 before:absolute before:content-[''] before:bg-PaleSkyBlu before:dark:bg-secondary before:w-687 before:h-687 before:-bottom-1/2 before:rounded-full before:xl:inline-block before:hidden">
       <div className="container">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-secondary mb-10">
+        {/* <h2 className="text-3xl md:text-5xl font-bold text-center text-secondary mb-10"> */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-secondary mb-8 lg:mb-12 leading-tight">
           How We Design Organisations to Win More
         </h2>
-        <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:gap-24 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-24">
+        {/* <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:gap-24 gap-5"> */}
 
           {/* Carousel */}
           <div
+            className="justify-center"
             data-aos="fade-right"
             data-aos-delay="200"
             data-aos-duration="1000"
           >
             <ThumbnailCarousel onSlideChange={setActiveIndex} />
           </div>
+          {/* <div
+            className="flex justify-center"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+              <ThumbnailCarousel onSlideChange={setActiveIndex} />
+          </div> */}
 
           {/* Dynamic content */}
           <div
-            className="md:pt-0 pt-6"
+            className="pt-2 lg:pt-0 text-center lg:text-left"
             data-aos="fade-left"
             data-aos-delay="200"
             data-aos-duration="1000"
