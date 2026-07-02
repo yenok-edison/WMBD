@@ -56,7 +56,7 @@ const ThumbnailCarousel: React.FC<Props> = ({ onSlideChange }) => {
   }, [activeIndex]);
 
   const slides = [
-    { src: "/images/ThumbnailSlider/c11.png", alt: "Conference 1" },
+    { src: "/images/ThumbnailSlider/c12.png", alt: "Conference 1" },
     { src: "/images/ThumbnailSlider/c2.jpeg", alt: "Conference 2" },
     { src: "/images/ThumbnailSlider/c3.jpeg", alt: "Conference 3" },
     // { src: "/images/ThumbnailSlider/Slider_4.jpg", alt: "Conference 4" },
