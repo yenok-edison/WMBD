@@ -11,21 +11,21 @@ const slideContent = [
    {
     heading: "The Unwavering Leader",
     description:
-      "Drawing from years of leadership advisory experience, Arjun Raj Urs shares insights, proven frameworks and a practical blueprint for leadership to help leaders drive growth, strengthen execution and build high-performing organizations.",
+      "Drawing from years of leadership advisory experience, Arjun Raj Urs shares insights, proven frameworks and a practical blueprint for leadership to help leaders drive growth, strengthen execution and build high-performing Organisations.",
     linkLabel: "Explore the Book",
     href: "/book",
   },
   {
     heading: "Growth & Organisational Performance",
     description:
-      "Identify the hidden barriers that slow growth and execution. Build the structure, alignment and accountability needed to improve organizational performance.",
+      "Identify the hidden barriers that slow growth and execution. Build the structure, alignment and accountability needed to improve Organisational performance.",
     linkLabel: "Explore Growth Programs",
-    href: "/",
+    href: "/enterprise",
   },
   {
     heading: "Arjun's Lens",
     description:
-      "Thought-provoking perspectives on leadership, growth, accountability and execution for leaders building organizations that are designed to win.",
+      "Thought-provoking perspectives on leadership, growth, accountability and execution for leaders building Organisations that are designed to win.",
     linkLabel: "Explore Articles",
     href: "/blog",
   },

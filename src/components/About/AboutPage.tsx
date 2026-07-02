@@ -10,7 +10,7 @@ const teamMembers = [
     role: "Founder & Business Growth Coach",
     image: "/images/hero/arjun1.jpeg",
     description:
-      "Arjun Raj Urs is a Business Results Coach and People Architect with over three decades of experience working with organizations across growth, leadership development, and business transformation. As the creator of the Win More By Design™ methodology, Arjun combines practical business experience with leadership coaching to help organizations strengthen productivity, align teams and achieve measurable business results.",
+      "Arjun Raj Urs is a Business Results Coach and People Architect with over three decades of experience working with Organisations across growth, leadership development, and business transformation. As the creator of the Win More By Design™ methodology, Arjun combines practical business experience with leadership coaching to help Organisations strengthen productivity, align teams and achieve measurable business results.",
 
     cards: [
       {
@@ -370,7 +370,7 @@ const TeamMemberCard = ({
 //               </h1>
 
 //               <p className="mt-10 text-lg md:text-xl leading-[2] text-SlateBlueText dark:text-CadetBlue max-w-4xl mx-auto">
-//                 Win More By Design focuses on not just on solving immediate challenges, but on building stronger leaders, stronger teams and stronger organizations. Through our Data Driven Coaching & Course Correction (D2C3™) approach, we help organizations move from firefighting and bottlenecks to clarity, collaboration  and measurable business outcomes.
+//                 Win More By Design focuses on not just on solving immediate challenges, but on building stronger leaders, stronger teams and stronger Organisations. Through our Data Driven Coaching & Course Correction (D2C3™) approach, we help Organisations move from firefighting and bottlenecks to clarity, collaboration  and measurable business outcomes.
 //               </p>
 
 //             </div>
@@ -437,8 +437,8 @@ export default function AboutPage() {
               <p className="mt-6 lg:mt-10 text-base sm:text-lg md:text-xl leading-8 lg:leading-[2] text-SlateBlueText dark:text-CadetBlue max-w-3xl lg:max-w-4xl mx-auto">
                 Win More By Design focuses not just on solving immediate
                 challenges, but on building stronger leaders, stronger teams,
-                and stronger organizations. Through our Data Driven Coaching &
-                Course Correction (D2C3™) approach, we help organizations move
+                and stronger Organisations. Through our Data Driven Coaching &
+                Course Correction (D2C3™) approach, we help Organisations move
                 from firefighting and bottlenecks to clarity, collaboration, and
                 measurable business outcomes.
               </p>

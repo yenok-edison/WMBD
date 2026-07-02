@@ -132,8 +132,8 @@ export default function BookPage() {
 
               <p className="mt-8 text-lg leading-[2] text-CadetBlue max-w-2xl">
                 Leadership is not tested when everything is stable. It is revealed when everything around you is not.
-                Built on three decades of leadership coaching and business transformation experience, The Unwavering Leader brings together practical insights, lived experiences and timeless leadership lessons from Arjun Raj Urs' 15-year journey with one of India's fastest-growing organizations.
-                Designed for founders, CEOs, business owners, managers and aspiring leaders, this book explores what it truly takes to remain unwavering amidst uncertainty, build strong leadership capability and scale organizations through people.
+                Built on three decades of leadership coaching and business transformation experience, The Unwavering Leader brings together practical insights, lived experiences and timeless leadership lessons from Arjun Raj Urs' 15-year journey with one of India's fastest-growing Organisations.
+                Designed for founders, CEOs, business owners, managers and aspiring leaders, this book explores what it truly takes to remain unwavering amidst uncertainty, build strong leadership capability and scale Organisations through people.
               </p>
 
               <div className="flex flex-wrap items-center gap-5 mt-12">
@@ -239,10 +239,10 @@ export default function BookPage() {
                 {/* Main book */}
                 <div className="relative hover:-translate-y-3 transition-all duration-700">
                   <Image
-                    src="/images/book/book1.png"
+                    src="/images/book/book_2.png"
                     alt="Book Cover"
-                    width={380}
-                    height={560}
+                    width={580}
+                    height={660}
                     className="drop-shadow-[0_40px_80px_rgba(0,0,0,0.45)]"
                   />
                 </div>

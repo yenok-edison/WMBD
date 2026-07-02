@@ -70,7 +70,7 @@ const Header: React.FC = () => {
     > */}
     <header className="fixed top-0 z-50 w-full">
       <div className="bg-primary text-secondary text-center py-2 text-xs md:text-sm font-semibold tracking-wider">
-        REMOVE BARRIERS • ACCELERATE GROWTH
+        REMOVE BARRIERS | ACCELERATE GROWTH
       </div>
 
       <div

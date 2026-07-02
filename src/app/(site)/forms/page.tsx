@@ -32,7 +32,7 @@ const page = () => {
                     >
                         Growth Program
                     </a>{" "}
-                    helps organizations overcome barriers and achieve lasting growth.
+                    helps Organisations overcome barriers and achieve lasting growth.
                     </>
                 }
                 

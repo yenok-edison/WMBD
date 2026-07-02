@@ -59,7 +59,7 @@ const solutions = [
     number: "01",
     title: "Win More By Design (Customized for Results)",
     content:
-      "The Win More by Design (WMBD) coaching framework is an objective-driven approach that  enables organizations to set and achieve short-term goals and a process template to achieve long-term business goals. The  methodology implements a robust, goal-oriented process customized to each organisation’s unique needs, ensuring accelerated and sustainable growth.",
+      "The Win More by Design (WMBD) coaching framework is an objective-driven approach that  enables Organisations to set and achieve short-term goals and a process template to achieve long-term business goals. The  methodology implements a robust, goal-oriented process customized to each organisation’s unique needs, ensuring accelerated and sustainable growth.",
     highlights: [
     ],
   },
@@ -188,8 +188,8 @@ export default function EnterprisePage() {
 
               <p className="mt-10 text-lg md:text-xl leading-[2] text-SlateBlueText dark:text-CadetBlue max-w-5xl mx-auto">
                 As organisations grow, new challenges begin to emerge.
-                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce organizational effectiveness.
-                Through our structured Data Driven Coaching & Course Correction (D2C3) Model, we help organizations improve leadership effectiveness, strengthen accountability culture, enhance organizational productivity and create sustainable business growth.
+                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce Organisational effectiveness.
+                Through our structured Data Driven Coaching & Course Correction (D2C3) Model, we help Organisations improve leadership effectiveness, strengthen accountability culture, enhance Organisational productivity and create sustainable business growth.
 
               </p>
             </div>
@@ -229,8 +229,8 @@ export default function EnterprisePage() {
               {/* DESC */}
               <p className="mt-10 text-lg md:text-xl leading-[2] text-SlateBlueText dark:text-CadetBlue max-w-5xl mx-auto">
                 As organisations grow, new challenges begin to emerge.
-                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce organizational effectiveness.
-                Through our structured Data Driven Coaching & Course Correction (D2C3) Model, we help organizations improve leadership effectiveness, strengthen accountability culture, enhance organizational productivity and create sustainable business growth.
+                At <strong>Win More By Design</strong>, we help founders, CEOs, business owners and leadership teams identify the hidden barriers that limit growth, weaken execution and reduce Organisational effectiveness.
+                Through our structured Data Driven Coaching & Course Correction (D2C3) Model, we help Organisations improve leadership effectiveness, strengthen accountability culture, enhance Organisational productivity and create sustainable business growth.
 
               </p>
             </div>
@@ -488,7 +488,7 @@ export default function EnterprisePage() {
                     How Healthy Is
                     <br className="hidden sm:block" />
                     <span className="block">
-                      Your Organization?
+                      Your Organisation?
                     </span>
                   </h2>
 
